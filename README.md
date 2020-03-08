@@ -84,10 +84,10 @@ Now the name of each ``wav`` file must be in the format of ``<letter in lowercas
 
 Then, of course, for each exception, you must provide a reference in the ``exceptions.rvc`` in the format of ``<syllable or character combination>@<replacement character>``. Example:
 
-``
+```
 gh@g
 ch@!
-``
+```
 
 This will mean that when RoverVoice phoneme parser will encounter ``gh``, it will read it as if it encountered the letter ``g``, but if it encounters ``ch``, it will try to look for ``!.wav`` and play it instead.
 
