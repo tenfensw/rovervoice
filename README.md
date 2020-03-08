@@ -80,7 +80,7 @@ RoverVoiceRelease(vc);
 ## Voice format
 RoverVoice voice is basically a folder full of prerecorded WAV files containing the pronunciation of each of the used character in the language. It also contains ``exceptions.rvc`` - a text file specified which character combinations shall be read differently.
 
-Now the name of each ``wav`` file must be in the format of ``<letter in lowercase>.wav``. But, if, let's say, you have a character combination that is read so differently that you cannot replace it with a pronunciation of one character. So, in that case, you can create either ``!.wav`` or ``<capital latin letters from A to Z>.wav\n`` to implement these (``\n`` is the newline character).
+Now the name of each ``wav`` file must be in the format of ``<letter in lowercase>.wav``. But, if, let's say, you have a character combination that is read so differently that you cannot replace it with a pronunciation of one character. So, in that case, you can create either ``!.wav`` or ``_<capital latin letters from A to Z>.wav\n`` to implement these (``\n`` is the newline character).
 
 Then, of course, for each exception, you must provide a reference in the ``exceptions.rvc`` in the format of ``<syllable or character combination>@<replacement character>``. Example:
 
