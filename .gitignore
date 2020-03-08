@@ -1,0 +1,6 @@
+o_*.o
+*.a
+*.so
+rospeak
+*.dSYM
+*.log
