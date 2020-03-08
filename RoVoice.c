@@ -88,7 +88,6 @@ RoverPhoneme** RoverVoiceSplitIntoPhonemes(const RoverVoice* rvc, const char* st
 					RoverPhoneme* nextPhm = result[i + strlen(key)];
 					RoverPhonemeSetNext(phmAgain, nextPhm);
 					RoverPhonemeSetAssociatedCharacter(phmAgain, value);
-					break;
 				}
 			}
 		}

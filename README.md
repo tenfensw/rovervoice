@@ -1,6 +1,7 @@
 # RoverVoice
 
 *A really tiny, banal TTS engine*
+
 *Copyright (C) Tim K 2019-2020 <timprogrammer@rambler.ru>*
 
 Licensed under 0BSD License.
@@ -11,6 +12,8 @@ Licensed under 0BSD License.
 
 RoverVoice also seems to be the only TTS (as of March 2020) to be licensed under 0BSD License.
 
+But I made it for research purposes only, so don't expect it to be as advanced as espeak or Apple's VoiceOver.
+
 ### Pros
 
 * Portable (written in C99, officially supports Windows, Mac, Linux and FreeBSD, other platforms with ``libcanberra`` or with Win32-like API might be supported too, but are untested)
@@ -19,7 +22,7 @@ RoverVoice also seems to be the only TTS (as of March 2020) to be licensed under
 ### Cons
 
 * Does not support non-Latin languages right now
-* Speaks broken English
+* Speaks broken English and (for now) sounds horrible
 * ...and, basically, it isn't that of a serious TTS engine, but rather just a fun research project
 
 ## Building
