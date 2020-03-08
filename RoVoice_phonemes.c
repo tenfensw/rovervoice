@@ -36,8 +36,15 @@ RoverPhoneme* RoverPhonemeCreate(const char* vid, const char ltr) {
 	if (!voicePath)
 		return NULL;
 	char* phonemeLetterPath = calloc(strlen(voicePath) + 7, sizeof(char));
+	char* otherPhonemeLetterPath = calloc(strlen(voicePath) + 8, sizeof(char));
 	sprintf(phonemeLetterPath, "%s/%c.wav", voicePath, ltr);
+	sprintf(otherPhonemeLetterPath, "%s/_%c.wav", voicePath, ltr);
 	RoverVoiceFixPath(phonemeLetterPath);
+	RoverVoiceFixPath(otherPhonemeLetterPath);
+	if (RoverVoiceFileExists(otherPhonemeLetterPath)) {
+		free(phonemeLetterPath);
+		phonemeLetterPath = otherPhonemeLetterPath;
+	}
 	if (!RoverVoiceFileExists(phonemeLetterPath)) {
 		fprintf(stderr, "'%s' - no such file\n", phonemeLetterPath);
 		free(phonemeLetterPath);
