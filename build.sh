@@ -7,7 +7,7 @@ TARGETLIB="libRoVoice.so"
 TARGETS="RoVoice_phonemes RoVoice_uncross RoVoice_map RoVoice"
 if test `uname` = "Darwin"
 then
-	MLDFLAGS="-framework AVKit -framework CoreFoundation"
+	MLDFLAGS="-framework AVFoundation -framework Cocoa -framework CoreFoundation"
 	TARGETS="RoVoice_macvoice $TARGETS"
 	TARGETLIB="libRoVoice.dylib"
 else
